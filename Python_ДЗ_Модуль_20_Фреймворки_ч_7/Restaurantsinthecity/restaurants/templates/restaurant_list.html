@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Список ресторанов</title>
+</head>
+<body>
+    <h1>Список ресторанов</h1>
+    <ul>
+        {% for i_restaurant in restaurant %}
+            <li>{{ restaurant.name }} - {{ restaurant.specialization }} - {{ restaurant.address }}</li>
+        {% empty %}
+            <li>Нет доступных ресторанов</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

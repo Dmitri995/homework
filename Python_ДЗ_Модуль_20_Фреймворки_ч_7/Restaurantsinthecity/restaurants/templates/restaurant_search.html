@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результаты поиска</title>
+</head>
+<body>
+    <h1>Результаты поиска по запросу "{{ request.GET.query }}"</h1>
+    <ul>
+        {% for restaurant in restaurants %}
+            <li>{{ restaurant.name }} - {{ restaurant.specialization }} - {{ restaurant.address }}</li>
+        {% empty %}
+            <li>Нет результатов для данного запроса</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
